@@ -1,0 +1,12 @@
+<div>
+  <div>
+      <p-button (click)="showHide()" label icon="fa fa-bars" styleClass="ui-button-info"></p-button>
+  </div>
+  <div style="padding-left: 100px">
+      <p-sidebar [(visible)]="visibleSidebar">
+          <div style="padding-top: 40px">
+              <p-menu [model]="items" [style]="{'width':'300px'}"></p-menu>
+          </div>
+      </p-sidebar>
+  </div>
+</div>
