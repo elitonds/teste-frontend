@@ -1,3 +1,4 @@
+import { AppListComponent } from './components/app-list/app-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MenuModule} from 'primeng/menu';
@@ -6,23 +7,38 @@ import {SidebarModule} from 'primeng/sidebar';
 import {SlideMenuModule} from 'primeng/slidemenu';
 import {ButtonModule} from 'primeng/button';
 import {PanelMenuModule} from 'primeng/panelmenu';
+import { RouterModule, Routes } from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { AppNewComponent } from './components/app-new/app-new.component';
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    redirectTo: '/',
+    pathMatch: 'full'
+  },
+  { path: 'list', component: AppListComponent },
+  { path: 'new', component:  AppNewComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    AppNewComponent,
+    AppListComponent
   ],
   imports: [
     BrowserModule,
     SidebarModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes),
     SlideMenuModule,
     MenuModule,
     ButtonModule,
-    PanelMenuModule
+    PanelMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

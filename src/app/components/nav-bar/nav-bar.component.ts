@@ -17,11 +17,13 @@ export class NavBarComponent implements OnInit {
     this.items = [
       {
         label: 'New',
-        icon: 'fa fa-fw fa-file-o'
+        icon: 'fa fa-fw fa-file-o',
+        routerLink:'new'
       },
       {
         label: 'List',
-        icon: 'fa fa-list-alt'
+        icon: 'fa fa-list-alt',
+        routerLink:'list'
       }
     ];
   }
