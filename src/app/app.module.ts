@@ -8,10 +8,13 @@ import {SlideMenuModule} from 'primeng/slidemenu';
 import {ButtonModule} from 'primeng/button';
 import {PanelMenuModule} from 'primeng/panelmenu';
 import { RouterModule, Routes } from "@angular/router";
-
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AppNewComponent } from './components/app-new/app-new.component';
+import {InputTextModule} from 'primeng/inputtext';
+import {DropdownModule} from 'primeng/dropdown';
+
+import {ReactiveFormsModule} from "@angular/forms";
 
 const appRoutes: Routes = [
   {
@@ -39,6 +42,9 @@ const appRoutes: Routes = [
     MenuModule,
     ButtonModule,
     PanelMenuModule,
+    ReactiveFormsModule,
+    InputTextModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,25 @@
-<p>
-  app-new works!
-</p>
+<section class="sample-app-content">
+  <h1>Model-based Form Example:</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <span class="ui-float-label fields">
+      <input id="name" type="text" size="30" pInputText>
+      <label for="name">Nome do item</label>
+    </span>
+    
+    <span class="ui-float-label fields">
+        <p-dropdown id="measurementUnit" [options]="units"></p-dropdown>
+        <label for="name">Unidade de medida</label>
+    </span>
+    <span class="ui-float-label fields">
+      <input id="amount" type="text" size="30" pInputText>
+      <label for="amount">Quantidade</label>
+    </span>
+    <div class="ui-float-label fields">
+      <input id="price" type="text" size="30" pInputText>
+      <label for="price">Preço</label>
+    </div>
+    <p>
+      <button type="submit" [disabled]="!form.valid">Submit</button>
+    </p>
+  </form>
+</section>
