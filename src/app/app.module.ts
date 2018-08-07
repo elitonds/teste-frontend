@@ -13,6 +13,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AppNewComponent } from './components/app-new/app-new.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
+import {InputMaskModule} from 'primeng/inputmask';
 
 import {ReactiveFormsModule} from "@angular/forms";
 
@@ -44,7 +45,8 @@ const appRoutes: Routes = [
     PanelMenuModule,
     ReactiveFormsModule,
     InputTextModule,
-    DropdownModule
+    DropdownModule,
+    InputMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
